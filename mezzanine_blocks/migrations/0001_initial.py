@@ -7,6 +7,10 @@ from django.db import models
 
 class Migration(SchemaMigration):
 
+    dependencies = [
+        ('sites', '0001_initial'),
+    ]
+
     def forwards(self, orm):
         # Adding model 'Block'
         db.create_table('mezzanine_blocks_block', (
